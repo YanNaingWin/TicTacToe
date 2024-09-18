@@ -54,7 +54,7 @@ export default class Server
 
 	constructor()
 	{
-		this.client = new Client('ws://localhost:2567')
+		this.client = new Client('wss://tictactoe-yrhq.onrender.com')
 		this.events = new Phaser.Events.EventEmitter()
 	}
 
@@ -65,7 +65,7 @@ export default class Server
 			isBot: isBot
 		}
         try {
-            const response = await fetch(`http://localhost:2567/create-room/${matchId}`, {
+            const response = await fetch(`https://tictactoe-yrhq.onrender.com/create-room/${matchId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

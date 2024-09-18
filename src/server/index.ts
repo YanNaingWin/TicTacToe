@@ -32,9 +32,6 @@ app.post('/create-room/:matchId', async (req, res) =>
             const roomInfo = await matchMaker.query({ roomId: existingRoom.roomId });
             if (roomInfo.length > 0 && roomInfo[0].clients >= 2) {
 
-				gameServer.define(`${matchId}`, TicTacToe, {isBot: isBot, isRoomFull: true})
-				.enableRealtimeListing();
-
                 return res.status(400).send(`Room with matchId: ${matchId} is full`);
             }
             return res.status(200).send({ roomId: existingRoom.roomId });
