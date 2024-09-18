@@ -30,6 +30,7 @@
 		"typescript": "^5.5.4"
 	},
 	"dependencies": {
+		"parcel-bundler": "^1.12.5",
 		"@colyseus/command": "^0.1.6",
 		"@colyseus/core": "^0.15.48",
 		"@colyseus/monitor": "^0.15.7",
